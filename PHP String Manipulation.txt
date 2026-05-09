@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP String Manipulation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            margin: 60px auto;
+            width: 380px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        input, select {
+            width: 90%;
+            padding: 8px;
+            margin: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #substring-fields { display: none; }
+        .result {
+            margin-top: 20px;
+            padding: 12px;
+            background: #eef;
+            border-radius: 8px;
+            font-size: 16px;
+            word-break: break-all;
+        }
+        .result span { font-weight: bold; color: blue; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>String Manipulation</h2>
+
+    <form method="POST" action="">
+        <input type="text" name="text" placeholder="Enter a string" required
+               value="<?php echo isset($_POST['text']) ? htmlspecialchars($_POST['text']) : ''; ?>">
+
+        <select name="operation" id="operation">
+            <option value="length">Length</option>
+            <option value="upper">Uppercase</option>
+            <option value="lower">Lowercase</option>
+            <option value="reverse">Reverse</option>
+            <option value="wordcount">Word Count</option>
+            <option value="substring">Substring</option>
+        </select>
+
+        <div id="substring-fields">
+            <input type="number" name="start" placeholder="Start Index"
+                   value="<?php echo isset($_POST['start']) ? $_POST['start'] : ''; ?>">
+            <input type="number" name="len" placeholder="Length"
+                   value="<?php echo isset($_POST['len']) ? $_POST['len'] : ''; ?>">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <?php
+    $selectedOp = isset($_POST['operation']) ? $_POST['operation'] : 'length';
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $text      = $_POST['text'];
+        $operation = $_POST['operation'];
+        $output    = "";
+
+        switch ($operation) {
+            case "length":
+                $output = "Length : <span>" . strlen($text) . "</span>";
+                break;
+            case "upper":
+                $output = "Uppercase : <span>" . strtoupper($text) . "</span>";
+                break;
+            case "lower":
+                $output = "Lowercase : <span>" . strtolower($text) . "</span>";
+                break;
+            case "reverse":
+                $output = "Reversed : <span>" . strrev($text) . "</span>";
+                break;
+            case "wordcount":
+                $output = "Word Count : <span>" . str_word_count($text) . "</span>";
+                break;
+            case "substring":
+                $start = $_POST['start'];
+                $len   = $_POST['len'];
+                if ($start !== "" && $len !== "") {
+                    $output = "Substring : <span>" . substr($text, $start, $len) . "</span>";
+                } else {
+                    $output = "Please enter Start Index and Length.";
+                }
+                break;
+            default:
+                $output = "Invalid operation.";
+        }
+
+        echo "<div class='result'>" . $output . "</div>";
+    }
+    ?>
+</div>
+
+<script>
+    var selectedOp = "<?php echo $selectedOp; ?>";
+
+    var select = document.getElementById('operation');
+    var subFields = document.getElementById('substring-fields');
+
+    // Set dropdown to previously selected value
+    select.value = selectedOp;
+
+    // Show or hide substring fields
+    function toggleFields() {
+        subFields.style.display = (select.value === 'substring') ? 'block' : 'none';
+    }
+
+    // Run on load to restore state after POST
+    toggleFields();
+
+    // Run on change
+    select.addEventListener('change', toggleFields);
+</script>
+
+</body>
+</html>
+

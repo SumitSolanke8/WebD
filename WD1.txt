@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Details</title>
+</head>
+<body>
+
+    <h1 align="center"><b>My Intoduction</b></h1>
+
+    <hr>
+
+    <h2>Basic Information</h2>
+    <p><strong>Name:</strong> <i>Sumit Solanke</i></p>
+    <p><strong>Course:</strong> <u>Computer Engineering</u></p>
+    <p><strong>College:</strong> <mark>Sinhgad College of Engineering</mark></p>
+    <p><strong>City:</strong> Pune</p>
+    <p><strong>Hobby:</strong> <small>Coding and Gaming</small></p>
+
+    <hr>
+
+    <h2>About Me</h2>
+    <p>
+        I am a student of computer engineering. I like learning new technologies 
+        and improving my programming skills. I enjoy coding and solving problems.
+        My aim is to become a successful software engineer in the future.
+    </p>
+
+    <hr>
+
+    <h2>Skills</h2>
+    <p>HTML</p>
+    <p>DSA</p>
+    <p>JavaScript</p>
+    <p>Java backend</p>
+
+    <hr>
+
+    <h2>Goals</h2>
+    <p><del>Old Goal: Cricketer</del></p>
+    <p><ins>New Goal: Web Developer</ins></p>
+
+    <hr>
+
+    <h2>Examples</h2>
+    <p><strong>Formula:</strong> H<sub>2</sub>O</p>
+    <p><strong>Power:</strong> 2<sup>3</sup> = 8</p>
+
+    <hr>
+
+    <h2>Contact Information</h2>
+    <p><strong>Email:</strong>sumitsolanke2006@gmail.com</p>
+    <p><strong>Phone:</strong> 8446xxxx33</p>
+
+    <hr>
+
+    <h1><p align="center">Thank You</p></h1>
+
+</body>
+</html>

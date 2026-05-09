@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form>
+  Name: <input type="text" id="name"><br><br>
+  Email: <input type="text" id="email"><br><br>
+  Gender: 
+  Male <input type="radio" name="gender" value="Male">
+  Female <input type="radio" name="gender" value="Female"><br><br>
+  Date of Birth: <input type="date" id="dob"><br><br>
+  <button type="button" onclick="validate()">Submit</button>
+</form>
+
+<p id="msg" style="color:red;"></p>
+
+<script>
+  function validate() {
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var dob = document.getElementById("dob").value;
+    var gender = document.querySelector('input[name="gender"]:checked');
+
+    if (name == "") {
+      document.getElementById("msg").innerHTML = "Name is required.";
+      return;
+    }
+
+    if (email == "" || !email.includes("@")) {
+      document.getElementById("msg").innerHTML = "Enter valid email.";
+      return;
+    }
+
+    if (gender == null) {
+      document.getElementById("msg").innerHTML = "Select gender.";
+      return;
+    }
+
+    if (dob == "") {
+      document.getElementById("msg").innerHTML = "Select date of birth.";
+      return;
+    }
+
+    document.getElementById("msg").style.color = "green";
+    document.getElementById("msg").innerHTML = "Form submitted successfully!";
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 40px;
+            background-color: rgb(192, 175, 175);
+        }
+        img{
+            border-radius: 50%;
+            width: 200px;
+        }
+        h4 {
+            color: rgb(16, 73, 73);
+            font-size: 30px;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Resume</h1><br>
+    <h3>Sumit Solanke</h3>
+    <p>Email: <a href="file:///home/stes/Documents/WebD/resume.html">sumitsolanke@gmail.com</a></p>
+    <p>Contact: +91 8446101033</p>
+    <p>location: Swargate</p>
+    <p style="align-content: center;">
+    <img style="align-content: center;" src="sundar.jpg" height="150px" width="150px" alt="Sunder">
+    </p><br>
+    <h4>Objective</h4>
+    <p>"Passionate about front-end development, seeking an entry-level position to utilize my skills in creating responsive websites. Committed to continuous improvement, learning from industry experts, and driving success for a dynamic organization."</p><br>
+
+    <table>
+        <caption style="font-size: larger; font-size: xx-large;">Edu Details</caption>
+        <tr>
+            <th>Qualification</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+        </tr>
+        <tr>
+            <td>BE</td>
+            <td>40%</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>SSC</td>
+            <td>35%</td>
+            <td>D</td>
+        </tr>
+    </table><br>
+
+    <h4>Skills</h4>
+    <ul>
+        <li>Java</li>
+        <li>Full Stack Web development</li>
+        <li>Backend Developer</li>
+        <li>Python</li>
+        <li>Communication skill</li>
+    </ul>
+    <h4>Experience</h4>
+    <ul>
+        <li>Built a full-stack e-commerce site using Node.js, Express, and MongoDB, featuring user authentication and payment gateway integration.</li>
+        <li>Implemented responsive design, achieving 100% score on Lighthouse accessibility audits.</li>
+        <li>Managed version control and deployment using Git and Heroku.
+</li>
+    </ul>
+    </body>
+</html>

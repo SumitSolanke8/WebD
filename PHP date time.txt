@@ -1,0 +1,49 @@
+<?php
+date_default_timezone_set('Asia/Kolkata');
+
+$doy   = date("z") + 1;
+$total = date("L") ? 366 : 365;
+$dleft = $total - $doy;
+$week  = date("W");
+$yrPct = round($doy / $total * 100);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to PHP</title>
+</head>
+<body>
+
+  <h1>Welcome to PHP!</h1>
+
+  <p><b>Date :</b> <?php echo date("d-m-Y"); ?></p>
+  <p><b>Time :</b> <span id="time"><?php echo date("h:i:s A"); ?></span></p>
+  <p><b>Day  :</b> <?php echo date("l"); ?></p>
+
+  <hr>
+
+  <p><b>Week No.   :</b> <?php echo $week; ?></p>
+  <p><b>Day of Year:</b> <?php echo $doy; ?></p>
+  <p><b>Days Left  :</b> <?php echo $dleft; ?></p>
+  <p><b>Year Progress:</b> <?php echo $yrPct; ?>%</p>
+
+</body>
+
+<script>
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  function tick(){
+    var n    = new Date();
+    var h    = n.getHours(), m = n.getMinutes(), s = n.getSeconds();
+    var ampm = h >= 12 ? 'PM' : 'AM';
+    var h12  = h % 12 || 12;
+    document.getElementById('time').textContent =
+      pad(h12) + ':' + pad(m) + ':' + pad(s) + ' ' + ampm;
+  }
+
+  tick();
+  setInterval(tick, 1000);
+</script>
+</html>
+

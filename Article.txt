@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Artificial Intelligence Article</title>
+
+<link rel="stylesheet" href="style3.css">
+
+<style>
+h1{
+color: darkblue;
+text-align: center;
+}
+
+h2{
+color: green;
+}
+
+.highlight{
+color: red;
+font-weight: bold;
+font-size: 19px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1><b>Artificial Intelligence</b></h1>
+
+<h2>Introduction</h2>
+
+<p>
+Artificial Intelligence (AI) is a branch of computer science that focuses on
+creating intelligent machines that can perform tasks normally requiring
+human intelligence such as learning, reasoning, and decision making.
+
+Artificial Intelligence (AI) is a branch of computer science that focuses on creating machines
+that can perform tasks that normally require human intelligence. These tasks include
+learning, reasoning, problem-solving, understanding language, and decision-making. AI
+systems are designed to analyze data, recognize patterns, and make intelligent decisions.
+
+The idea of Artificial Intelligence started in the 1950s when scientists began developing
+programs that could imitate human thinking. Over time, with the advancement of technology,
+AI has become more powerful and widely used in many industries. Today, AI is an important
+part of modern technology.
+
+AI is used in many areas such as healthcare, education, banking, transportation, and
+entertainment. In healthcare, AI helps doctors diagnose diseases and analyze medical
+images. In education, AI is used to create smart learning systems and online tutors. In
+transportation, AI is used in self-driving cars and traffic management systems.
+
+Artificial Intelligence has many advantages. It helps reduce human effort, improves accuracy,
+and can process large amounts of data quickly. AI systems can also work continuously
+without getting tired.
+
+However, AI also has some disadvantages. Developing AI systems can be expensive and
+may lead to job displacement in some industries. Despite these challenges, AI has a very
+bright future and will continue to play an important role in improving technology and human life.
+</p>
+
+<h2>Applications of AI</h2>
+
+<p>
+AI is used in many fields such as healthcare, education, banking,
+transportation, and customer service. Examples include voice assistants,
+chatbots, recommendation systems, and self-driving cars.
+
+Artificial Intelligence is used in many fields to make work faster and more efficient.
+In healthcare, AI helps doctors diagnose diseases and analyze medical reports.
+In education, AI is used in smart learning systems and online tutors that help students learn better.
+In banking and finance, AI helps detect fraud and manage financial data.
+In transportation, AI is used in self-driving cars and traffic control systems.
+AI is also used in customer service through chatbots and virtual assistants that answer questions
+and provide support. Additionally, AI is used in entertainment platforms to recommend movies,
+music, and videos based on user preferences.
+</p>
+
+<h2>Advantages of AI</h2>
+
+<p>
+AI increases efficiency, reduces human error, and can process large amounts of data quickly.
+It also helps automate repetitive tasks.
+</p>
+
+<p>
+Reduces Human Effort<br>
+AI can perform many tasks automatically, which reduces the amount of work humans need to do.
+</p>
+
+<p>
+High Accuracy<br>
+AI systems can perform calculations and analysis with very high accuracy, reducing human errors.
+</p>
+
+<p>
+Works Continuously<br>
+Unlike humans, AI machines can work 24/7 without getting tired or needing breaks.
+</p>
+
+<p>
+Fast Decision Making<br>
+AI can process large amounts of data quickly and make decisions faster than humans.
+</p>
+
+<p>
+Automation of Repetitive Tasks<br>
+AI can handle repetitive tasks such as data entry, scheduling, and monitoring systems.
+</p>
+
+<p>
+Improves Productivity<br>
+Businesses can increase efficiency and productivity by using AI systems.
+</p>
+
+<p>
+Useful in Dangerous Situations<br>
+AI robots can work in dangerous environments such as space exploration, deep oceans, or disaster areas.
+</p>
+
+<p>
+Better Data Analysis<br>
+AI can analyze huge amounts of data and provide useful insights for better decision-making.
+</p>
+
+<h2>Future of AI</h2>
+
+<p class="highlight">
+Artificial Intelligence will play an important role in the future.
+It will continue to grow and impact many industries such as healthcare,
+education, transportation, and business. AI systems will become more advanced
+and capable of performing complex tasks with greater accuracy and speed.
+</p>
+</div>
+</body>
+</html>

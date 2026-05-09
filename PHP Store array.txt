@@ -1,0 +1,80 @@
+<?php
+session_start();
+
+// Initialize array in session
+if (!isset($_SESSION['items'])) {
+    $_SESSION['items'] = [];
+}
+
+// ADD
+if (isset($_POST['add']) && !empty(trim($_POST['value']))) {
+    $_SESSION['items'][] = trim($_POST['value']);
+}
+
+// DELETE
+if (isset($_POST['delete']) && isset($_SESSION['items'][(int)$_POST['index']])) {
+    array_splice($_SESSION['items'], (int)$_POST['index'], 1);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Manager</title>
+    <style>
+        body        { font-family: Arial, sans-serif; max-width: 500px; margin: 40px auto; background: #f4f4f4; padding: 20px; }
+        h2          { color: #333; }
+        input[type=text] { padding: 8px; width: 70%; border: 1px solid #ccc; border-radius: 4px; }
+        button      { padding: 8px 14px; background: #4CAF50; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        button.del  { background: #e53935; }
+        table       { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; border-radius: 4px; }
+        th          { background: #4CAF50; color: #fff; padding: 10px; }
+        td          { padding: 9px; border-bottom: 1px solid #eee; text-align: center; }
+        .empty      { color: #999; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h2>Array Manager</h2>
+
+<!-- ADD FORM -->
+<form method="POST">
+    <input type="text" name="value" placeholder="Enter a value...">
+    <button type="submit" name="add">Add</button>
+</form>
+
+<!-- DISPLAY -->
+<?php if (empty($_SESSION['items'])): ?>
+    <p class="empty">Array is empty. Start by adding items.</p>
+<?php else: ?>
+    <table>
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Value</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($_SESSION['items'] as $i => $val): ?>
+            <tr>
+                <td><?= $i ?></td>
+                <td><?= htmlspecialchars($val) ?></td>
+                <td>
+                    <!-- DELETE FORM -->
+                    <form method="POST">
+                        <input type="hidden" name="index" value="<?= $i ?>">
+                        <button type="submit" name="delete" class="del">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <p>Total items: <strong><?= count($_SESSION['items']) ?></strong></p>
+<?php endif; ?>
+
+</body>
+</html>
+
