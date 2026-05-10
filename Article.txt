@@ -136,3 +136,48 @@ and capable of performing complex tasks with greater accuracy and speed.
 </div>
 </body>
 </html>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+/* External Stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+h2 {
+    color: green;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+    font-size: 19px;
+}
